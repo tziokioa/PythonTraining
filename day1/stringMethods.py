@@ -1,3 +1,4 @@
+import string
 text = "Hello World"
 print(text)
 
@@ -22,3 +23,9 @@ number_4 = '123.123'
 print(float(number_4))
 number_5 = '1+5j'
 print(complex(number_5))
+
+
+
+x=string.Template('$ham and $eggs')
+print(dir(x))
+print(x.substitute(ham='sunka', eggs='vajicka'))
