@@ -1,0 +1,2 @@
+print('Hello world',end='') --> Remove next line (\n)
+print('Gopas')
