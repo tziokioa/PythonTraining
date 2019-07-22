@@ -29,3 +29,11 @@ print(complex(number_5))
 x=string.Template('$ham and $eggs')
 print(dir(x))
 print(x.substitute(ham='sunka', eggs='vajicka'))
+
+x = 'this is a very very very very long string'
+print(x.count('very'))
+
+print(x.endswith('very'))
+print(x.endswith('very',0,14))
+
+L2='This is a string'.split()
