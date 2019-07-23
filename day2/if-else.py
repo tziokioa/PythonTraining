@@ -19,7 +19,5 @@ elif num2>num1 :
 else :
     print("Numbers are equal")
 
-i=0
-while i <= 10:
-    i+=1
-    print(i)
+add = lambda x,y: x+y
+print(add(1,2))
