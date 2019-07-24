@@ -1,0 +1,13 @@
+CZ ,Prague
+CZ,  Brno
+SK, Kosice 
+CZ ,Hradec Kralove
+FR,Paris
+DE,Berlin
+FR,Lyon
+SK  ,Trencin 
+SK,Bratislava
+CZ,SK:Zilina
+CZ Pardubice
+A,B
+Cz,Kladno
