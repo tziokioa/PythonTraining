@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
+
+class Circle:
+    
+
 import math
 while True:
   line=input('Enter radius in cm ')
