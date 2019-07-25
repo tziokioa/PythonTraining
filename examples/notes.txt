@@ -88,6 +88,60 @@ class Person:
     print ("Name : %s, age : %d" % (self.name,self.age))
   def __str__(self):
     return(self.name)
+  def __repr__(abc):
+    return ''
+  def __gt__(self,other):
+    if (self.age>other.age):
+      return True
+    return False
+  def __eq__(a,b):
+    if type(b)==int:
+      return a.age==b
+    if a.age==b.age:
+      return True
+    return False
 
 pepa=Person("Josef",20)
 pepa.printall()
+
+
+class Person:
+  Person_id=1
+  def __init__(self,name,age):
+    self.name=name
+    self.age=age
+    self.cid=Person.Person_id
+    Person.Person_id+=1
+  @classmethod
+  def resetPerson(cls):
+    cls.Person_id=1
+  def printall(self):
+    print ("Name : %s, age : %d, id : %d" % (self.name,self.age,self.cid))
+  @staticmethod
+  def plus(a,b):
+    return a+b
+
+pepa1=Person("Josef",20)
+pepa2=Person("Josef",20)
+pepa3=Person("Josef",20)
+pepa1.resetPerson()
+lojza=Person("Alois",19)
+pepa1.printall()
+lojza.printall()
+
+
+class trida:
+  def __init__(self):
+    self.x=1
+    self.__y=2
+  def printall(self):
+    print(self.x)
+    print(self.__y)
+
+
+class myint(int):
+  def __add__(self,other):
+    return self+other
+
+var=myint(10)
+var+'20'
