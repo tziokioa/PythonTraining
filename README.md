@@ -13,3 +13,4 @@ Interesting implementations:
 
 
 docs.python.org/3.7
+https://www.python-course.eu/python3_sequential_data_types.php
