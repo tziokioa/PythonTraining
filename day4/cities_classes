@@ -1,0 +1,22 @@
+import sys
+import re
+inputlines=[" CZ ,Prague","CZ,  Brno",'SK, Kosice ',"CZ ,Hradec Kralove",
+
+            "FR,Paris",'DE,Berlin','FR,Lyon','SK  ,Trencin ',"SK,Bratislava",
+
+            "CZ,","SK:Zilina","CZ Pardubice","A,B","Cz,Kladno"]
+
+cities={}
+myreg = re.compile('^([A-Z]{2}),([A-Z][a-z].*)')
+for row in inputlines:
+    m=myreg.search(row)
+    if m:
+        ccode,cname=m.groups()
+         if ccode is None:
+     continue
+  if ccode in cities:
+     cities[ccode].append(cname)
+  else:
+     cities[ccode]=[cname]
+for country in sorted(cities):
+   print(country+': '+', '.join(sorted(cities[country])))

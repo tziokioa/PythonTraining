@@ -16,3 +16,9 @@ class Person:
 
     def printall(self):
         print("Name: {}, Age: {}".format(self.name, self.age))
+
+    def main():
+        print("This is our script !!!")
+
+    if __name__ == '__main__':
+        main()
