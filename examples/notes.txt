@@ -1,0 +1,77 @@
+def maximum (*cisla):
+  """Counts max"""
+  m=cisla[0]
+  for n in cisla[1:]:
+    if n>m:
+      m=n
+  return m
+
+
+def example (n, list1, list2):
+  """Mutable objects"""
+  list1.append('Black')
+  x=list2
+  x.append("we will see this in list2")
+  x=[3,2,1]
+  n+=1
+
+
+def example ():
+  """Namespace"""
+  a=1
+  b=2
+
+a=10
+b=20
+example()
+print(a,b)
+
+
+myfile=open ("/etc/passwd","r")
+count=0
+while row=myfile.readline() != "":
+  count+=1
+  print(row)
+
+myfile.close()
+
+
+
+import string
+myfile=open ("/etc/passwd","r")
+for a in myfile:
+  print(a.rstrip())
+
+myfile.close()
+
+
+import pickle
+a="This is my text"
+b=[1,2,4,5,6]
+myfile=open("state","wb")
+pickle.dump(a,myfile)
+pickle.dump(b,myfile)
+myfile.close()
+
+import pickle
+myfile=open("state","rb")
+y=pickle.load(myfile)
+x=pickle.load(myfile)
+myfile.close()
+print(y)
+print(x)
+
+
+import shelve
+adresar=shelve.open("/tmp/adresy")
+adresar["policie"]=["Statni policie","158"]
+adresar["hasici"]=["Hasicsky sbor","150"]
+adresar.close()
+
+
+import shelve
+adresar=shelve.open("/tmp/adresy")
+print(adresar["policie"])
+print(adresar["hasici"])
+adresar.close()
+
