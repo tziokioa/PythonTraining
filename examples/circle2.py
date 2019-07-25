@@ -1,17 +1,21 @@
-from pyglet import gl
+from random import randrange
 
-def draw():
-    window.clear()
+soucet = 0
+while soucet < 21:
+    print('Máš', soucet, 'bodů')
+    odpoved = input('Otočit kartu? ')
+    if odpoved == 'ano':
+        karta = randrange(2, 11)
+        print('Otočil/a jsi', karta)
+        soucet = soucet + karta
+    elif odpoved == 'ne':
+        break
+    else:
+        print('Nerozumím! Odpovídej "ano", nebo "ne"')
 
-    for x_offset in (-window.width, 0, window.width):
-        for y_offset in (-window.height, 0, window.height):
-            # Remember the current state
-            gl.glPushMatrix()
-            # Move everything drawn from now on by (x_offset, y_offset, 0)
-            gl.glTranslatef(x_offset, y_offset, 0)
-
-            # Draw
-            batch.draw()
-
-            # Restore remembered state (this cancels the glTranslatef)
-            gl.glPopMatrix()
+if soucet == 21:
+    print('Gratuluji! Vyhrál/a jsi!')
+elif soucet > 21:
+    print('Smůla!', soucet, 'bodů je moc!')
+else:
+    print('Chybělo jen', 21 - soucet, 'bodů!')

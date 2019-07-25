@@ -141,7 +141,11 @@ class trida:
 
 class myint(int):
   def __add__(self,other):
-    return self+other
+    #return int(self)+int(other)
+    return myint(int(self)+int(other))
 
 var=myint(10)
 var+'20'
+
+
+
