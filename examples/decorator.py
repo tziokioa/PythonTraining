@@ -1,3 +1,4 @@
+"""
 def pozdrav_me(jmeno):
 	return "Ahoj "+jmeno
 
@@ -13,7 +14,7 @@ print vyvolej_pozdrav('Jardo')
 pozdrav_me=dekorator_pozdravu(pozdrav_me)
 
 print pozdrav_me('Jardo')
-
+"""
 ###############################################
 #a ted to udelame pres dekorator
 
